@@ -1,0 +1,83 @@
+
+
+
+
+
+
+
+
+
+
+html, body { height: 100%; }
+body {
+  background:radial-gradient(ellipse at center, rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #B7E8EB 100%);
+  overflow: hidden;
+  background: rgb(255,255,255);
+background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(1,88,113,1) 82%);
+}
+
+.ocean { 
+  height: 5%;
+  width:100%;
+  position:absolute;
+  bottom:0;
+  left:0;
+  background: #015871;
+}
+
+.wave {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
+  position: absolute;
+  top: -198px;
+  width: 6400px;
+  height: 198px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+  top: -175px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0,-25px,0);
+  }
+  50% {
+    transform: translate3d(0,5px,0);
+  }
+}
+section{
+    text-align: center;
+    margin: 100px 20% 100px 20%;
+    color: rgb(255, 255, 255);
+    position: absolute;
+}
+h2{
+    color: rgb(255, 255, 255);
+}
+p{
+    font-size: 20px;
+}
+header{
+    background-color: #015871;
+    border-bottom: solid 1px white;
+    -webkit-box-shadow: -1px 2px 5px 0px rgba(255,255,255,1);
+-moz-box-shadow: -1px 2px 5px 0px rgba(255,255,255,1);
+box-shadow: -1px 2px 5px 0px rgba(255,255,255,1);
+}
+iframe{
+    width:50%;
+    height:300px;
+}
